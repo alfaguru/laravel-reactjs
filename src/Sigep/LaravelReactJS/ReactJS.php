@@ -185,7 +185,7 @@ class ReactJS
         $code .= "var componentFactory = $react.createFactory($component);";
 
         $code .= sprintf(
-            "$react.renderToString(componentFactory(%s));",
+            "$reactDOMServer.renderToString(componentFactory(%s));",
             json_encode($this->data)
         );
 
